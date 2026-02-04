@@ -308,7 +308,8 @@ local v169 = _DEBUG and function(...)
 end or function()
 
 end;
-if not _DEBUG or not l_require_0("inspect") then
+local v170 = l_pcall_0(l_require_0, "inspect");
+if not _DEBUG or not v170 then
     local function _(...)
         return ...;
     end;
